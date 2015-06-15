@@ -1,4 +1,27 @@
 //
+
+/*
+
+Developer Name : MaxymusBoopathy
+
+iOS Developer
+
+email: www.mboopathi@gmail.com
+iCloud: maxymusboopathy@iCloud.com
+
+Phone: +91 9952671049/ +91 8861277070
+
+Work: Bangalore
+
+Home: Tamilnadu - Salem - Rasipuram - Namagiripettai
+
+*/
+//
+//  iCarousel.swift
+//  MBiCarouselSwift
+
+// MB- MaxymusBoopathy
+
 //  AppDelegate.swift
 //  MBiCarouselSwift
 //
@@ -13,9 +36,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    var carousel : iCarousel = iCarousel()
+
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "rotated", name: UIDeviceOrientationDidChangeNotification, object: nil)
+
         return true
     }
 
@@ -40,6 +67,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    
+    
+    func rotated()
+    {
+        if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation))
+        {
+            println("Lanscape")
+            
+            carousel.reloadData()
+        }
+        
+        if(UIDeviceOrientationIsPortrait(UIDevice.currentDevice().orientation))
+        {
+            println("Portrait")
+            
+            carousel.reloadData()
+            
+        }
+        
+    }
+    
+
 
 
 }

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Ong-qD-mZa">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="BbD-YH-2l2" customClass="iCarousel">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="81k-26-bEM"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="JlC-QR-hSh"/>
+                                </connections>
+                            </view>
+                            <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5b-oa-gg5">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <barButtonItem style="plain" id="qgh-p6-Ggk">
+                                        <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" momentary="YES" id="Not-GJ-Lrt">
+                                            <rect key="frame" x="16" y="7" width="218" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segments>
+                                                <segment title="Linear"/>
+                                                <segment title="Horizontal"/>
+                                            </segments>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </segmentedControl>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="VUr-OS-tZU"/>
+                                    <barButtonItem style="plain" id="TDc-fR-T1G">
+                                        <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="dJs-9I-uRP">
+                                            <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="pickerSwitchAction:" destination="vXZ-lx-hvc" eventType="valueChanged" id="pTX-Cl-alv"/>
+                                            </connections>
+                                        </switch>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <pickerView alpha="0.64999999999999969" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucZ-Wk-oim">
+                                <rect key="frame" x="0.0" y="394" width="600" height="162"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.96133105190000001" green="1" blue="0.20829828319999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BbD-YH-2l2" firstAttribute="trailing" secondItem="ucZ-Wk-oim" secondAttribute="trailing" id="Coy-nk-76R"/>
+                            <constraint firstItem="Ong-qD-mZa" firstAttribute="top" secondItem="BbD-YH-2l2" secondAttribute="top" id="Faq-2U-gAP"/>
+                            <constraint firstItem="Ong-qD-mZa" firstAttribute="trailing" secondItem="D5b-oa-gg5" secondAttribute="trailing" id="Fqt-Jp-Pbd"/>
+                            <constraint firstItem="D5b-oa-gg5" firstAttribute="leading" secondItem="ucZ-Wk-oim" secondAttribute="leading" id="Jq8-KT-fR7"/>
+                            <constraint firstItem="BbD-YH-2l2" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="O1K-L5-Plg"/>
+                            <constraint firstAttribute="trailing" secondItem="Ong-qD-mZa" secondAttribute="trailing" id="QJh-f7-Fmc"/>
+                            <constraint firstItem="Ong-qD-mZa" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="QMS-Fj-Kip"/>
+                            <constraint firstItem="D5b-oa-gg5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="UJ4-1Y-jF2"/>
+                            <constraint firstItem="D5b-oa-gg5" firstAttribute="top" secondItem="ucZ-Wk-oim" secondAttribute="bottom" id="Xhj-OI-GFo"/>
+                            <constraint firstItem="BbD-YH-2l2" firstAttribute="leading" secondItem="Ong-qD-mZa" secondAttribute="leading" id="byw-zj-Aik"/>
+                            <constraint firstItem="BbD-YH-2l2" firstAttribute="leading" secondItem="ucZ-Wk-oim" secondAttribute="leading" id="cWH-X0-a8x"/>
+                            <constraint firstItem="D5b-oa-gg5" firstAttribute="trailing" secondItem="ucZ-Wk-oim" secondAttribute="trailing" id="gDM-U7-cCn"/>
+                            <constraint firstItem="BbD-YH-2l2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="ieg-e1-SRV"/>
+                            <constraint firstItem="D5b-oa-gg5" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="jrq-fW-P4a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomTBar" destination="D5b-oa-gg5" id="pR4-Q5-Ekl"/>
+                        <outlet property="carousel" destination="BbD-YH-2l2" id="sTF-F8-DQJ"/>
+                        <outlet property="pickerSwitch" destination="dJs-9I-uRP" id="y7Y-VY-tWp"/>
+                        <outlet property="pickerView" destination="ucZ-Wk-oim" id="kAv-pX-ArC"/>
+                        <outlet property="showCloseBtn" destination="Not-GJ-Lrt" id="YWE-m6-N0u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-93" y="254"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="50" height="468"/>
+    </resources>
+</document>
