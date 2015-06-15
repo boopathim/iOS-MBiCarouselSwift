@@ -19,4 +19,3 @@ Home: Tamilnadu - Salem - Rasipuram - Namagiripettai
 //  Copyright (c) 2015 MaxymusBoopathy. All rights reserved.
 
 
-iOS-MBiCarouselSwift/ScreenShot/iOS Simulator Screen Shot 12-Jun-2015 8.02.05 pm.png
