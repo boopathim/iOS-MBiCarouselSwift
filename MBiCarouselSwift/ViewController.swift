@@ -37,7 +37,7 @@ class ViewController: UIViewController,iCarouselDataSource, iCarouselDelegate,UI
     // not Needed
     var items: [Int] = []
     
-    // Insert the Image names Here
+    // Just add the images and put the image name in this array ur carousel is ready for you :) Insert the Image names Here
     var pageImages: NSArray = NSArray(objects: "3","4","5","6","2","3","4","5","6","2","3","4","5","6","2","3","4","5","6","2","3","4","5","6","2","3","4","5","6","2","3","4","5","6","2","3","4","5","6","2","3","4","5","6","2","3","4","5","6")
     
     
