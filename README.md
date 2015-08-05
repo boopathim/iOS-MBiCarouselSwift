@@ -20,11 +20,11 @@ Home: Tamilnadu - Salem - Rasipuram - Namagiripettai
 
 
 
-Default iCarousel will not have the reflection view .. They used an Png image for the reflection effect. But The Reflection view(.h,.m files) added in this project will enable every image to reflect and we can customise the eamount of refelection . 
+Default iCarousel will not have the reflection view .. They used an Png image for the reflection effect. But The Reflection view(.h,.m files) added in this project will enable every image to reflect and we can customize the amount of reflection . 
 
 Able to change the images shapes in real time .
 
-Able to Change the direction of Coverflow without changing the orientation provided with Horizontal and parallel functions.
+Able to Change the direction of Coverflow without changing the orientation provided with Horizontal and parallel switching functions.
 
 All the effects are changed dynamically with a Picker view 
 
